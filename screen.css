@@ -45,6 +45,11 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+  h1 {
+font-size: 8em;
+color: #ff69b4;
+}
+
 body {
   font-family: sans-serif;
   color: #2a2a2a; }
