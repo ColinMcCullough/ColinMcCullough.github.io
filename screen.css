@@ -48,6 +48,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   h1 {
 font-size: 20px;
 color: #000000;
+font-weight: bold;
 }
 
 body {
