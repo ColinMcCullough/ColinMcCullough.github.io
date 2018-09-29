@@ -19,10 +19,12 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 body {
-  line-height: 1; }
+  line-height: 2; }
 
 ol, ul {
-  list-style: none; }
+  list-style: square;
+  line-height: 2;
+  list-style-position: inside }
 
 table {
   border-collapse: collapse;
@@ -48,8 +50,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   h1 {
 font-size: 20px;
 color: #000000;
-font-weight: bold;
-}
+font-weight: bold; }
+
+  p {
+line-height: 2; }
 
 body {
   font-family: sans-serif;
