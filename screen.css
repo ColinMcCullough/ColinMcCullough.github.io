@@ -10,10 +10,12 @@ body {
 p {line-height: 2; 
   }
 
-ol, ul {
+ul {
   list-style: square;
   line-height: 2;
-  list-style-position: inside }
+  list-style-position: inside
+  font-size: 15; 
+  }
 
 
 a img {
@@ -35,8 +37,7 @@ h1 {
     font-family: Georgia;
     text-align: center;
     padding-bottom: 10px; 
-    border-bottom: 3px solid black;
-    display: inline-block;
+
   }
 
 a {
@@ -50,47 +51,97 @@ a {
   position: relative;
   margin: auto;
   grid-gap: 0px;
-  grid-template-areas: "header header"
-    									 "nav nav"
-   										 "left right"				  
-  									   "footer footer";
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 180px 50px 500px 50px;
+  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
 }
 
 header {
   background-color: red;
-  grid-area: header;
+  grid-area: 1 / 1 / 3 / 13;
   text-align: center;
   position: relative;
 }
 
 
+
 nav {
   background-color: rgb(0, 0, 0);
-  grid-area: nav;
+  grid-area: 3 / 1 / 4 / 13;
   position: relative;
 }
 
 .left {
   background-color: grey;
-  grid-area: left;
+  grid-area: 4 / 1 / 11 / 7;
   position: relative;
-  text-align: center
+  text-align: center;
+}
+
+.left p {
+  text-align: left;
+  padding: 20px;
+}
+
+.left h2 {
+  border-bottom: 3px solid black;
+  display: inline-block;
+}
+
+.right h2 {
+  border-bottom: 3px solid black;
+  display: inline-block;
 }
 
 
 .right {
   background-color: rgb(59, 59, 59);
-  grid-area: right;
+  grid-area: 4 / 7 / 11 / 13;
   position: relative;
   text-align: center
 }
 
 footer {
   background-color: rgb(36, 36, 36);
-  grid-area: footer;
+  grid-area: 11/ 1 / 13 / 13;
   color: white;
   text-align: center;
   position: relative;
+}
+
+.overlap {
+  grid-area: 5/ 8 / 10 / 10;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  z-index: 5;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 100px;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: red;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: white;
 }
