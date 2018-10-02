@@ -14,8 +14,10 @@ ul {
   list-style: square;
   line-height: 2;
   list-style-position: inside
-  font-size: 15; 
   }
+ .left ul {
+  text-align: left; 
+ } 
 
 
 a img {
@@ -37,7 +39,6 @@ h1 {
     font-family: Georgia;
     text-align: center;
     padding-bottom: 10px; 
-
   }
 
 a {
@@ -84,11 +85,14 @@ nav {
 .left h2 {
   border-bottom: 3px solid black;
   display: inline-block;
+  color: white;
+  text-align: center;
 }
 
 .right h2 {
   border-bottom: 3px solid black;
   display: inline-block;
+  color: white;
 }
 
 
@@ -108,12 +112,15 @@ footer {
 }
 
 .overlap {
-  grid-area: 5/ 8 / 10 / 10;
+  grid-area: 5/ 7 / 10 / 10;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
   z-index: 5;
+}
+.image {
+  padding-left: 25px;
 }
 
 /* Add a black background color to the top navigation */
@@ -127,7 +134,7 @@ footer {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 100px;
+  padding: 14px 25px;
   margin-right: 50px;
   margin-left: 50px;
   text-decoration: none;
