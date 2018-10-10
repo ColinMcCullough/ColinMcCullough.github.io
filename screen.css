@@ -27,7 +27,7 @@ a img {
 
 h1 {
   color: #000000;
-  font-size: 2em;
+  font-size: 3em;
   width: 100%;
   font-family: Georgia;
   text-align: center;
@@ -54,7 +54,7 @@ a {
   position: relative;
   margin: auto;
   grid-gap: 0px;
-  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+  grid-template: repeat(11, 100px) / repeat(12, 1fr);
 }
 
 header {
@@ -108,7 +108,7 @@ nav {
 
 footer {
   background-color: rgb(36, 36, 36);
-  grid-area: 11/ 1 / 13 / 13;
+  grid-area: 11/ 1 / 12 / 13;
   color: white;
   text-align: center;
   position: relative;
