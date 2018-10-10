@@ -47,7 +47,7 @@ h1 {
 a {
   color: rgb(255, 0, 0); }
   a:hover {
-    color: red; }
+    color: white; }
 
 .container {
   display: grid;
@@ -55,7 +55,7 @@ a {
   position: relative;
   margin: auto;
   grid-gap: 0px;
-  grid-template: repeat(17, 100px) / repeat(12, 1fr);
+  grid-template: repeat(18, 100px) / repeat(12, 1fr);
 }
 
 header {
@@ -75,7 +75,7 @@ nav {
 
 .weekonescratch {
   background-color: grey;
-  grid-area: 4 / 1 / 10 / 13;
+  grid-area: 4 / 1 / 11 / 13;
   position: relative;
   text-align: center;
 }
@@ -87,14 +87,14 @@ iframe {
 
 .weektwoscratchleft {
   background-color: rgb(53, 53, 53);
-  grid-area: 10 / 1 / 17 / 7;
+  grid-area: 11 / 1 / 18 / 7;
   position: relative;
   text-align: center;
 }
 
 .weektwoscratchright {
   background-color: rgb(53, 53, 53);
-  grid-area: 10 / 7 / 17 / 13;
+  grid-area: 11 / 7 / 18 / 13;
   position: relative;
   text-align: center;
 }
@@ -102,7 +102,7 @@ iframe {
 
 footer {
   background-color: rgb(36, 36, 36);
-  grid-area: 17/ 1 / 18 / 13;
+  grid-area: 18/ 1 / 19 / 13;
   color: white;
   text-align: center;
   position: relative;
