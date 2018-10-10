@@ -1,4 +1,3 @@
-
 #main {
   padding: 0px; }
 
@@ -20,20 +19,33 @@ h1 {
   width: 100%;
   font-family: Georgia;
   text-align: center;
-  font-weight: bold}
+  font-weight: bold
+}
 
   h2 { 
     line-height: 24px;
-    color: black;
     font-weight: 100;
     font-size: 22px;
+    font-family: Georgia; 
+    padding-bottom: 10px;   
+    border-bottom: 3px solid black;
+    display: inline-block;
+    color: white;
+    text-align: center;
+  }
+
+  h3 { 
+    line-height: 20px;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
     font-family: Georgia;
     text-align: center;
-    padding-bottom: 10px; 
+
   }
 
 a {
-  color: black; }
+  color: rgb(255, 0, 0); }
   a:hover {
     color: red; }
 
@@ -43,14 +55,15 @@ a {
   position: relative;
   margin: auto;
   grid-gap: 0px;
-  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+  grid-template: repeat(11, 1fr) / repeat(12, 1fr);
 }
 
 header {
   background-color: red;
-  grid-area: 1 / 1 / 2 / 13;
+  grid-area: 1 / 1 / 3 / 13;
   text-align: center;
   position: relative;
+  height: 200px;
 }
 
 nav {
@@ -69,44 +82,41 @@ nav {
 iframe {
   padding-bottom: 15px;
 }
-.weektwoscratch {
-  background-color: rgb(196, 196, 196);
-  grid-area: 7 / 1 / 11 / 13;
+
+
+.weektwoscratchleft {
+  background-color: rgb(53, 53, 53);
+  grid-area: 7 / 1 / 11 / 7;
   position: relative;
   text-align: center;
 }
 
-
-.weekonescratch h2 {
-  border-bottom: 3px solid black;
-  display: inline-block;
-  color: white;
+.weektwoscratchright {
+  background-color: rgb(53, 53, 53);
+  grid-area: 7 / 7 / 11 / 13;
+  position: relative;
   text-align: center;
 }
 
-.weektwoscratch h2 {
-  border-bottom: 3px solid black;
-  display: inline-block;
-  color: white;
-  text-align: center;
-}
 
 footer {
   background-color: rgb(36, 36, 36);
-  grid-area: 11/ 1 / 13 / 13;
+  grid-area: 11/ 1 / 12 / 13;
   color: white;
   text-align: center;
   position: relative;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
+/* Navbar container */
+.navbar {
   overflow: hidden;
+  background-color: #333;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Links inside the navbar */
+.navbar a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -114,17 +124,58 @@ footer {
   margin-right: 50px;
   margin-left: 50px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 24px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: red;
-  color: black;
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: white;
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 24px;
+  border: none;
+  outline: none;
   color: white;
+  padding: 24px 25px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
 }
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 

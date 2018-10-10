@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link href="../screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="scratch.css" media="screen" rel="stylesheet" type="text/css" />
     <title>Colins Scratch Programs</title>
   </head>
@@ -11,12 +12,20 @@
             <h1>Scratch Programs</h1>
         </header>
         <nav>
-            <div class="topnav">
-                <a href="../index.html">Home</a>
-                <a href="scratch-programs/index.html">Scratch Programs</a>
-                <a href="reading-assignments/index.html">Reading Assignments</a>
-                <a href="final-exam/index.html">Final Exam</a>
+          <div class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="scratch-programs/index.html">Scratch Programs</a>
+            <div class="dropdown">
+              <button class="dropbtn">Reading Assignments
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="code/index.html">CODE</a>
+                <a href="dreaming-in-code/index.html">Dreaming In Code</a>               
               </div>
+            </div>
+            <a href="final-exam/index.html">Final Exam</a>
+          </div>
         </nav>
         <section class="weekonescratch">
             <h2>Week 1 Scratch</h2> 
@@ -24,13 +33,18 @@
               <p>Press the green flag to begin!</p>
               <iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/249011617/?autostart=false" frameborder="0" allowfullscreen></iframe>
           </section>
-          <section class="weektwoscratch">
-              <h2>Week 2 Scratch</h2> 
-                <p>Click the green flag and watch the ball navigate through the maze to the other side!</p>
+          <section class="weektwoscratchleft">
+              <h2>Week 2 Scratch</h2>
+                <h3>Sprit Maze</h3>
+                  <p>Click the green flag and watch the ball navigate through the maze to the other side!</p>
+                  <iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/249909997/?autostart=false" frameborder="0" allowfullscreen></iframe>
+          </section>
+          <section class="weektwoscratchright">
+            <h2>Week 2 Scratch</h2>
+              <h3>Punch-A-Crock</h3>
                 <p>See how many Crocks you can box in 60 Seconds!</p>  
-                <iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/250445718/?autostart=false" frameborder="0" allowfullscreen></iframe>
                 <iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/250206996/?autostart=false" frameborder="0" allowfullscreen></iframe>   
-              </section>
+        </section>
         <footer>
             <p>Website Built By Colin McCullough Fall 2018</p>
           </footer>
