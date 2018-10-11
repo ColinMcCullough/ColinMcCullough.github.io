@@ -40,3 +40,10 @@ table td:nth-child(1)
   width: 300px;
   border: 1px solid white;
 }
+a {
+    color:white; 
+}
+a:hover {
+      color: rgb(255, 0, 0); 
+    
+}
