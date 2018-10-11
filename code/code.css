@@ -7,7 +7,7 @@
     grid-template: repeat(15, 100px) / repeat(12, 1fr);
   }
   .embeddoc {
-    background-color: grey;
+    background-color: rgb(184, 184, 184);
     grid-area: 4 / 1 / 15 / 13;
     position: relative;
     text-align: center;

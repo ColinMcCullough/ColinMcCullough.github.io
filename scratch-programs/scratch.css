@@ -83,6 +83,10 @@ iframe {
   text-align: center;
 }
 
+.weektwoscratchleft p, .weektwoscratchright p   {
+  color: white;
+}
+
 .weektwoscratchright {
   background-color: rgb(53, 53, 53);
   grid-area: 11 / 7 / 18 / 13;
