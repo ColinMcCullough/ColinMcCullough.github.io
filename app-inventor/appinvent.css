@@ -21,4 +21,13 @@
     text-align: center;
     position: relative;
   }
+
+.appsection a {
+    color:white;
+    text-decoration: none; 
+}
+.appsection a:hover {
+      color: rgb(255, 0, 0); 
+      text-decoration: none;
+}
   
