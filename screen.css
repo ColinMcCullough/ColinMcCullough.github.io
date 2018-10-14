@@ -33,14 +33,11 @@ h1 {
   text-align: center;
   font-weight: bold}
 
-  h2 { 
-    line-height: 24px;
-    color: black;
-    font-weight: 100;
-    font-size: 22px;
-    font-family: Georgia;
+  h2 {
+    border-bottom: 3px solid black;
+    display: inline-block;
+    color: white;
     text-align: center;
-    padding-bottom: 10px; 
   }
 
 a {
@@ -131,7 +128,7 @@ footer {
   overflow: hidden;
   background-color: #333;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /* Links inside the navbar */
@@ -139,11 +136,11 @@ footer {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 25px 25px;
+  padding: 30px 15px;
   margin-right: 50px;
   margin-left: 50px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /* The dropdown container */
@@ -154,11 +151,11 @@ footer {
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 24px;
+  font-size: 20px;
   border: none;
   outline: none;
   color: white;
-  padding: 37px 25px;
+  padding: 38px 25px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
