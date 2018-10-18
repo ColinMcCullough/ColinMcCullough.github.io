@@ -75,16 +75,21 @@ var z = function( p ) { // p could be any variable name
   };
 
   p.draw = function() {
+    //background
     p.background('white');
+    //sky
     p.stroke(135,206,250);
     p.fill(135,206,250);
     p.rect(0,0,1100,150);
+    //land
     p.stroke(139,69,19);
     p.fill(139,69,19);
     p.rect(0,150,1100,200);
+    //road
     p.stroke('black');
     p.fill('black');
     p.quad(540,150,560,150,590,350,510,350);
+    //road dash
     p.stroke('yellow');
     p.line(550,350,550,340);
     p.line(550,330,550,320);
@@ -96,8 +101,59 @@ var z = function( p ) { // p could be any variable name
     p.line(550,210,550,200);
     p.line(550,190,550,180);
     p.line(550,170,550,160);
+    p.stroke('white');
+    p.fill('white');
+    //Cloud 1
+    var d = 20
+    var x = 25
+    var y = 25
+    var z = 15
+    p.ellipse(x, y, d, d);
+    p.ellipse(x+z, y-5, d, d);
+    p.ellipse(x+z, y+5, d, d);
+    p.ellipse(x+(z*2), y-5, d, d);
+    p.ellipse(x+(z*2), y+5, d, d);
+    p.ellipse(x+45,y,d,d);
+    //Cloud 2    
+    var x = 250
+    var y = 45
+    p.ellipse(x, y, d, d);
+    p.ellipse(x+z, y-5, d, d);
+    p.ellipse(x+z, y+5, d, d);
+    p.ellipse(x+(z*2), y-5, d, d);
+    p.ellipse(x+(z*2), y+5, d, d);
+    p.ellipse(x+45,y,d,d);
+    //Cloud 3    
+    var x = 500
+    var y = 25
+    p.ellipse(x, y, d, d);
+    p.ellipse(x+z, y-5, d, d);
+    p.ellipse(x+z, y+5, d, d);
+    p.ellipse(x+(z*2), y-5, d, d);
+    p.ellipse(x+(z*2), y+5, d, d);
+    p.ellipse(x+45,y,d,d);
+    //Cloud 4    
+    var x = 750
+    var y = 45
+    p.ellipse(x, y, d, d);
+    p.ellipse(x+z, y-5, d, d);
+    p.ellipse(x+z, y+5, d, d);
+    p.ellipse(x+(z*2), y-5, d, d);
+    p.ellipse(x+(z*2), y+5, d, d);
+    p.ellipse(x+45,y,d,d);
+    //Cloud 4    
+    var x = 1000
+    var y = 25
+    p.ellipse(x, y, d, d);
+    p.ellipse(x+z, y-5, d, d);
+    p.ellipse(x+z, y+5, d, d);
+    p.ellipse(x+(z*2), y-5, d, d);
+    p.ellipse(x+(z*2), y+5, d, d);
+    p.ellipse(x+45,y,d,d);
+  
 
-
+ 
+ 
     }
   }
 var myp5 = new p5(z, 'sketch-holder-third-row');
