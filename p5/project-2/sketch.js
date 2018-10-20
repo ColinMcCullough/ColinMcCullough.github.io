@@ -150,10 +150,15 @@ var z = function( p ) { // p could be any variable name
     p.ellipse(x+(z*2), y-5, d, d);
     p.ellipse(x+(z*2), y+5, d, d);
     p.ellipse(x+45,y,d,d);
-  
-
- 
- 
+    //Mountain 1
+    
+    for (var i = 75; i < 1000; i += 75) {
+      p.stroke(139,69,19);
+      p.fill('tan');
+      p.triangle(i,75,i+75,150,i-75,150);
+      p.fill('white');
+      p.triangle(i,75,i+15,90,i-15,90);
+   }
     }
   }
 var myp5 = new p5(z, 'sketch-holder-third-row');
