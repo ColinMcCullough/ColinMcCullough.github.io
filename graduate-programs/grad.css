@@ -4,7 +4,7 @@
     position: relative;
     margin: auto;
     grid-gap: 0px;
-    grid-template: repeat(30, 100px) / repeat(12, 1fr);
+    grid-template: repeat(41, 100px) / repeat(12, 1fr);
   }
   .uodescription{
     background-color: rgb(53, 53, 53);
@@ -26,7 +26,7 @@
   }
   .lifefactors {
     background-color: rgb(218, 218, 218);
-    grid-area: 12 / 1 / 18 / 13;
+    grid-area: 12 / 1 / 17 / 13;
     position: relative;
     text-align: center;
     padding: 50px;
@@ -43,15 +43,17 @@
   
   .gradtable {
     background-color: rgb(184, 184, 184);
-    grid-area: 18 / 1 / 30 / 13;
+    grid-area: 17 / 1 / 41 / 13;
     position: relative;
     text-align: center;
     padding: 50px;
   }
 
   footer {
-    grid-area: 30 / 1 / 31 / 13;
+    grid-area: 41 / 1 / 42 / 13;
   }
+
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -77,6 +79,13 @@ table td:nth-child(1)
   font-weight: bold;
   width: 300px;
   border: 1px solid white;
+}
+
+table tr:nth-child(10)
+{
+  background-color: black;
+  color: white;
+  font-weight: bold;
 }
 .gradtable a {
     color:white; 
