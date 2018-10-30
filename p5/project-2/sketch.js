@@ -67,14 +67,14 @@ var z = function( p ) { // p could be any variable name
   }
 var myp5 = new p5(z, 'sketch-holder-rightone');
 
-// Sketch Five
+// My Sketch
 var z = function( p ) { // p could be any variable name
   p.setup = function() {
     p.createCanvas(1100, 350);
     p.background(204);
   };
 
-  p.draw = function() {
+    p.draw = function() {
     //background
     p.background('white');
     //sky
@@ -89,67 +89,40 @@ var z = function( p ) { // p could be any variable name
     p.stroke('black');
     p.fill('black');
     p.quad(540,150,560,150,590,350,510,350);
+    
     //road dash
-    p.stroke('yellow');
-    p.line(550,350,550,340);
-    p.line(550,330,550,320);
-    p.line(550,310,550,300);
-    p.line(550,290,550,280);
-    p.line(550,270,550,260);
-    p.line(550,250,550,240);
-    p.line(550,230,550,220);
-    p.line(550,210,550,200);
-    p.line(550,190,550,180);
-    p.line(550,170,550,160);
-    p.stroke('white');
-    p.fill('white');
-    //Cloud 1
+    for (var i = 170; i <= 350; i += 20) {
+      p.stroke('yellow');
+      p.line(550,i,550,i - 10); 
+    }
+
     var d = 20
-    var x = 25
-    var y = 25
     var z = 15
-    p.ellipse(x, y, d, d);
-    p.ellipse(x+z, y-5, d, d);
-    p.ellipse(x+z, y+5, d, d);
-    p.ellipse(x+(z*2), y-5, d, d);
-    p.ellipse(x+(z*2), y+5, d, d);
-    p.ellipse(x+45,y,d,d);
-    //Cloud 2    
-    var x = 250
-    var y = 45
-    p.ellipse(x, y, d, d);
-    p.ellipse(x+z, y-5, d, d);
-    p.ellipse(x+z, y+5, d, d);
-    p.ellipse(x+(z*2), y-5, d, d);
-    p.ellipse(x+(z*2), y+5, d, d);
-    p.ellipse(x+45,y,d,d);
-    //Cloud 3    
-    var x = 500
     var y = 25
-    p.ellipse(x, y, d, d);
-    p.ellipse(x+z, y-5, d, d);
-    p.ellipse(x+z, y+5, d, d);
-    p.ellipse(x+(z*2), y-5, d, d);
-    p.ellipse(x+(z*2), y+5, d, d);
-    p.ellipse(x+45,y,d,d);
-    //Cloud 4    
-    var x = 750
+    //Top Cloud Loop
+    for (var i = 25; i <= 1025; i += 500) {
+      p.stroke('white');
+      p.fill('white');
+      p.ellipse(i, y, d, d);
+      p.ellipse(i+z, y-5, d, d);
+      p.ellipse(i+z, y+5, d, d);
+      p.ellipse(i+(z*2), y-5, d, d);
+      p.ellipse(i+(z*2), y+5, d, d);
+      p.ellipse(i+45,y,d,d);
+  }    
+   //Bottom Cloud Loop
     var y = 45
-    p.ellipse(x, y, d, d);
-    p.ellipse(x+z, y-5, d, d);
-    p.ellipse(x+z, y+5, d, d);
-    p.ellipse(x+(z*2), y-5, d, d);
-    p.ellipse(x+(z*2), y+5, d, d);
-    p.ellipse(x+45,y,d,d);
-    //Cloud 4    
-    var x = 1000
-    var y = 25
-    p.ellipse(x, y, d, d);
-    p.ellipse(x+z, y-5, d, d);
-    p.ellipse(x+z, y+5, d, d);
-    p.ellipse(x+(z*2), y-5, d, d);
-    p.ellipse(x+(z*2), y+5, d, d);
-    p.ellipse(x+45,y,d,d);
+    for (var i = 275; i <= 775; i += 500) {
+      p.stroke('white');
+      p.fill('white');
+      p.ellipse(i, y, d, d);
+      p.ellipse(i+z, y-5, d, d);
+      p.ellipse(i+z, y+5, d, d);
+      p.ellipse(i+(z*2), y-5, d, d);
+      p.ellipse(i+(z*2), y+5, d, d);
+      p.ellipse(i+45,y,d,d);
+  } 
+
     //Mountain 1
     
     for (var i = 75; i < 1000; i += 75) {
