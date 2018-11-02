@@ -4,11 +4,11 @@
     position: relative;
     margin: auto;
     grid-gap: 0px;
-    grid-template: repeat(13, 100px) / repeat(12, 1fr);
+    grid-template: repeat(22, 100px) / repeat(12, 1fr);
   }
   .appsection {
     background-color: rgb(184, 184, 184);
-    grid-area: 4 / 1 / 13 / 13;
+    grid-area: 4 / 1 / 22 / 13;
     position: relative;
     text-align: center;
     padding: 20px;
@@ -16,7 +16,7 @@
 
   footer {
     background-color: rgb(36, 36, 36);
-    grid-area: 13/ 1 / 14 / 13;
+    grid-area: 22/ 1 / 23 / 13;
     color: white;
     text-align: center;
     position: relative;
