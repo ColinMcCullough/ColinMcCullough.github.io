@@ -68,6 +68,7 @@ var z = function( p ) { // p could be any variable name
 var myp5 = new p5(z, 'sketch-holder-rightone');
 
 // My Sketch
+
 var z = function( p ) { // p could be any variable name
   p.setup = function() {
     p.createCanvas(1100, 350);
@@ -92,6 +93,7 @@ var z = function( p ) { // p could be any variable name
     
     //road dash
     for (var i = 170; i <= 350; i += 20) {
+      p.strokeWeight(3);
       p.stroke('yellow');
       p.line(550,i,550,i - 10); 
     }
@@ -123,15 +125,36 @@ var z = function( p ) { // p could be any variable name
       p.ellipse(i+45,y,d,d);
   } 
 
+
     //Mountain 1
-    
     for (var i = 75; i < 1000; i += 75) {
+      p.strokeWeight(1);
       p.stroke(139,69,19);
       p.fill('tan');
       p.triangle(i,75,i+75,150,i-75,150);
       p.fill('white');
       p.triangle(i,75,i+15,90,i-15,90);
    }
+    // Cactus
+    for (var i = 100; i < 1100; i += 300) {
+      p.stroke('green');
+      p.strokeWeight(8);
+      p.line(i,300,i,335);
+      p.stroke('green');
+      p.noFill();
+      p.arc(i + 5, 310, 20, 20, 0, p.HALF_PI);
+      p.arc(i - 5, 305, 20, 25, p.HALF_PI, p.PI);
+    }
+    // Cactus
+    for (var i = 25; i < 1100; i += 300) {
+      p.stroke('green');
+      p.strokeWeight(8);
+      p.line(i,200,i,235);
+      p.stroke('green');
+      p.noFill();
+      p.arc(i + 5, 210, 20, 20, 0, p.HALF_PI);
+      p.arc(i - 5, 205, 20, 25, p.HALF_PI, p.PI);
+    }
     }
   }
 var myp5 = new p5(z, 'sketch-holder-third-row');
