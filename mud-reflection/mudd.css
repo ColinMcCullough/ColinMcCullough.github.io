@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
+    grid-gap: 0px;
+    grid-template: repeat(10, 100px) / repeat(12, 1fr);
+  }
+  .content {
+    background-color: rgb(184, 184, 184);
+    grid-area: 4 / 1 / 10 / 13;
+    position: relative;
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .content p {
+    line-height: 3;
+    
+  }
+
+  footer {
+    background-color: rgb(36, 36, 36);
+    grid-area: 10/ 1 / 11 / 13;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+
+
+.appsection a {
+    color:white;
+    text-decoration: none; 
+}
+.appsection a:hover {
+      color: rgb(255, 0, 0); 
+      text-decoration: none;
+}

@@ -51,8 +51,11 @@
 
   footer {
     grid-area: 41 / 1 / 42 / 13;
+  
   }
-
+  footer p {
+    text-align: center;
+  }
 
 table {
     border-collapse: collapse;

@@ -8,7 +8,7 @@ body {
   line-height: 2; }
 
 p {line-height: 2;
-  font-size: 16px; 
+  font-size: 18px; 
   }
 
 ul {
@@ -18,7 +18,8 @@ ul {
   }
  .left ul {
   text-align: left;
-  padding-right: 20px; 
+  padding-right: 20px;
+  font-size: 18px; 
  } 
 
 
@@ -51,7 +52,7 @@ a {
   position: relative;
   margin: auto;
   grid-gap: 0px;
-  grid-template: repeat(11, 100px) / repeat(12, 1fr);
+  grid-template: repeat(12, 100px) / repeat(12, 1fr);
 }
 
 header {
@@ -75,15 +76,16 @@ nav {
 
 .left {
   background-color: grey;
-  grid-area: 4 / 1 / 11 / 7;
+  grid-area: 4 / 1 / 12 / 7;
   position: relative;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .left p {
   text-align: left;
-  padding: 20px;
-  
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .left h2 {
@@ -102,21 +104,21 @@ nav {
 
 .right {
   background-color: rgb(59, 59, 59);
-  grid-area: 4 / 7 / 11 / 13;
+  grid-area: 4 / 7 / 12 / 13;
   position: relative;
   text-align: center
 }
 
 footer {
   background-color: rgb(36, 36, 36);
-  grid-area: 11/ 1 / 12 / 13;
+  grid-area: 12/ 1 / 13 / 13;
   color: white;
   text-align: center;
   position: relative;
 }
 
 .overlap {
-  grid-area: 5/ 7 / 10 / 10;
+  grid-area: 6/ 7 / 11 / 10;
   display: block;
   margin-left: auto;
   margin-right: auto;
