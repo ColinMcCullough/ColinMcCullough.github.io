@@ -4,7 +4,7 @@
     position: relative;
     margin: auto;
     grid-gap: 0px;
-    grid-template: repeat(29, 100px) / repeat(12, 1fr);
+    grid-template: repeat(32, 100px) / repeat(12, 1fr);
   }
   .halfadder {
     background-color: rgb(184, 184, 184);
@@ -19,51 +19,76 @@
     position: relative;
     text-align: center;
   }
-  .fourbitadder {
+  .fourbitadderleft {
     background-color: rgb(53, 53, 53);
-    grid-area: 7 / 1 / 14 / 13;
+    grid-area: 7 / 1 / 12 / 7;
+    position: relative;
+    text-align: center;
+  } 
+  .fourbitadderright {
+    background-color: rgb(53, 53, 53);
+    grid-area: 7 / 7 / 12 / 13;
     position: relative;
     text-align: center;
   } 
   .left {
     background-color: rgb(184, 184, 184);
-    grid-area: 14 / 1 / 19 / 7;
+    grid-area: 12 / 1 / 17 / 7;
     position: relative;
     text-align: center;
     padding: 20px;
   }
   .right {
     background-color: rgb(184, 184, 184);
-    grid-area: 14 / 7 / 19 / 13;
+    grid-area: 12 / 7 / 17 / 13;
     position: relative;
     text-align: center;
     padding: 20px;
   }
-  .video {
-    background-color: rgb(53, 53, 53);
-    grid-area: 19 / 1 / 24 / 13;
-    position: relative;
-    text-align: center;
-    padding: 10px;
-  }
+
   .leftone {
-    background-color: rgb(184, 184, 184);
-    grid-area: 24 / 1 / 29 / 7;
+    background-color: rgb(53, 53, 53);
+    grid-area: 17 / 1 / 22 / 7;
     position: relative;
     text-align: center;
     
   }
   .righttwo {
+    background-color: rgb(53, 53, 53);
+    grid-area: 17 / 7 / 22 / 13;
+    position: relative;
+    text-align: center; 
+  }
+  .leftoneone {
     background-color: rgb(184, 184, 184);
-    grid-area: 24 / 7 / 29 / 13;
+    grid-area: 22 / 1 / 26 / 7;
     position: relative;
     text-align: center;
     
   }
+  .righttwotwo {
+    background-color: rgb(184, 184, 184);
+    grid-area: 22 / 7 / 26 / 13;
+    position: relative;
+    text-align: center; 
+  }
+  .leftoneoneone {
+    background-color: rgb(53, 53, 53);
+    grid-area: 26 / 1 / 32 / 7;
+    position: relative;
+    text-align: center;
+    
+  }
+  .righttwotwotwo {
+    background-color: rgb(53, 53, 53);
+    grid-area: 26 / 7 / 32 / 13;
+    position: relative;
+    text-align: center; 
+  }
 
   footer {
     background-color: rgb(36, 36, 36);
-    grid-area: 29/ 1 / 30 / 13;
+    grid-area: 32/ 1 / 33 / 13;
     color: white;
     text-align: center;
     position: relative;
