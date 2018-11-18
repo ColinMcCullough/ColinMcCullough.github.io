@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="nand-2-tetris.css" media="screen" rel="stylesheet" type="text/css" />
+    
+    <title>Nand to Tetris | Project 1</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class ="background">
+            <h1>Nand to Tetris</h1>
+        </header>
+        <nav>
+          <div class="navbar">
+            <a href="../index.html">Home</a> 
+            <div class="dropdown">
+              <button class="dropbtn">Programming
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../scratch-programs/index.html">Scratch Programs</a>
+                <a href="../app-inventor/index.html">App Inventor</a>
+                <a href="../p5/project-2/index.html">P5.JS Programs</a>
+                <a href="../python/index.html">Python Programs</a>
+                <a href="../code-hs/index.html">Code HS</a>
+                <a href="../logism/index.html">Logism</a>
+                <a href="index.html">Nand to Tetris</a>           
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Reading Assignments
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../code/index.html">CODE</a>
+                <a href="../dreaming-in-code/index.html">Dreaming In Code</a>
+                <a href="../mud-reflection/index.html">Reflection: "Big Ball of Mud"</a>                
+              </div>
+            </div>
+            <a href="../graduate-programs/index.html">Graduate Programs</a>
+            <a href="../final-exam/index.html">Midterm / Final</a>
+          </div>
+        </nav>
+            <section class="title">
+                <h1>Project 1</h1>
+            </section>
+            <section class="menuleft">
+                <h2>Elementary Logic Gates</h2>
+                    <ul>
+                        <li><a href="#not">Not Gate</a></li>
+                        <li><a href="#and">And Gate</a></li>
+                        <li><a href="#or">Or Gate</a></li>
+                        <li><a href="#xor">Xor Gate</a></li>
+                        <li><a href="#mux">Mux Gate</a></li>
+                        <li><a href="#dmux">DMux Gate</a></li>
+                    </ul>
+            </section>
+            <section class="menucenter">
+                <h2>16 Bit Variants</h2>
+                    <ul>
+                        <li><a href="#not16">Not16 Gate</a></li>
+                        <li><a href="#and16">And16 Gate</a></li>
+                        <li><a href="#or16">Or16 Gate</a></li>
+                        <li><a href="#mux16">Mux16 Gate</a></li>
+                    </ul>
+            </section>
+            <section class="menuright">
+                <h2>Multi-Way Variants</h2>
+                <ul>
+                    <li><a href="#or8way">Or8Way Gate</a></li>
+                    <li><a href="#mux4way16">Mux4Way16 Gate</a></li>
+                    <li><a href="#mux8way16">Mux8Way16 Gate</a></li>
+                    <li><a href="#dmux4way">DMux4Way Gate</a></li>
+                    <li><a href="#dmux8way">DMux8Way Gate</a></li>
+                </ul>
+            </section>
+            <section class="notgate">
+                <h2 id ="not">Not Gate</h2>
+                    <div class="row">
+                        <div class="column">
+                            <img src="../images/nand-tetris-project-1/not-gate-hdl.png" alt="Not Gate" style="width:100%">
+                        </div>
+                        <div class="column">
+                            <img src="../images/nand-tetris-project-1/not-gate-logism.png" alt="Not Gate" style="width:100%">
+                        </div>
+                        <div class="column">
+                            <img src="../images/nand-tetris-project-1/not-gate-test.png" alt="Not Gate" style="width:100%">
+                        </div>
+                    </div>
+            </section>
+            <section class="andgate">
+                    <h2 id ="and">And Gate</h2>
+                        <div class="row">
+                            <div class="column">
+                                <img src="../images/nand-tetris-project-1/and-gate-hdl.png" alt="And Gate" style="width:100%">
+                            </div>
+                            <div class="column">
+                                <img src="../images/nand-tetris-project-1/and-gate-logism.png" alt="And Gate" style="width:100%">
+                            </div>
+                            <div class="column">
+                                <img src="../images/nand-tetris-project-1/and-gate-test.png" alt="And Gate" style="width:100%">
+                            </div>
+                        </div>
+                </section>
+                <section class="orgate">
+                        <h2 id ="or">Or Gate</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/or-gate-hdl.png" alt="Or Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/or-gate-logism.png" alt="Or Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/or-gate-test.png" alt="Or Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="xorgate">
+                    <h2 id ="xor">Xor Gate</h2>
+                        <div class="row">
+                            <div class="column">
+                                <img src="../images/nand-tetris-project-1/xor-gate-hdl.png" alt="Xor Gate" style="width:100%">
+                            </div>
+                            <div class="column">
+                                <img src="../images/nand-tetris-project-1/xor-gate-logism.png" alt="Xor Gate" style="width:100%">
+                            </div>
+                            <div class="column">
+                                <img src="../images/nand-tetris-project-1/xor-gate-test.png" alt="Xor Gate" style="width:100%">
+                            </div>
+                        </div>
+                </section>
+                <section class="muxgate">
+                        <h2 id ="mux">Mux Gate</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/mux-gate-hdl.png" alt="Mux Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/mux-gate-logism.png" alt="Mux Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/mux-gate-test.png" alt="Mux Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="dmuxgate">
+                        <h2 id ="dmux">DMux Gate</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-gate-hdl.png" alt="DMux Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-gate-logism.png" alt="DMux Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-gate-test.png" alt="DMux Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="not16gate">
+                        <h2 id ="not16">Not16 Gate</h2>
+                            <div class="row">
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/not16-gate-hdl.png" alt="Not16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/not16-gate-logism.png" alt="Not16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/not16-gate-test.png" alt="Not16 Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="and16gate">
+                        <h2 id ="and16">And16 Gate</h2>
+                            <div class="row">
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/and16-gate-hdl.png" alt="And16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/and16-gate-logism.png" alt="And16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/and16-gate-test.png" alt="And16 Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="or16gate">
+                        <h2 id ="or16">Or16 Gate</h2>
+                            <div class="row">
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/or16-gate-hdl.png" alt="Or16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/or16-gate-logism.png" alt="Or16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/or16-gate-test.png" alt="Or16 Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="mux16gate">
+                        <h2 id ="mux16">Mux16 Gate</h2>
+                            <div class="row">
+                                <div class="column2">
+                                    <img src="../images/nand-tetris-project-1/mux16-gate-hdl.png" alt="Mux16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/mux16-gate-logism.png" alt="Mux16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/mux16-gate-test.png" alt="Mux16 Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="or8waygate">
+                        <h2 id ="or8way">Or8Way Gate</h2>
+                            <div class="row">
+                                <div class="column2">
+                                    <img src="../images/nand-tetris-project-1/or-8way-gate-hdl.png" alt="Or8Way Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/or-8way-gate-logism.png" alt="Or8Way Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/or-8way-gate-test.png" alt="Or8Way Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="mux4way16">
+                        <h2 id ="mux4way16">Mux4Way16 Gate</h2>
+                            <div class="row">
+                                <div class="column2">
+                                    <img src="../images/nand-tetris-project-1/mux-4way16-gate-hdl.png" alt="Mux4Way16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/mux-4way16-gate-logism.png" alt="Mux4Way16 Gate" style="width:100%">
+                                </div>
+                                <div class="column3">
+                                    <img src="../images/nand-tetris-project-1/mux-4way16-gate-test.png" alt="Mux4Way16 Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="mux8way16">
+                        <h2 id ="mux8way16">Mux8Way16 Gate</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/mux-8way16-gate-hdl.png" alt="Mux8Way16 Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/mux-8way16-gate-logism.png" alt="Mux8Way16 Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/mux-8way16-gate-test.png" alt="Mux8Way16 Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="dmux4way">
+                        <h2 id ="dmux4way">DMux4Way Gate</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-4way-gate-hdl.png" alt="DMux4Way Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-4way-gate-logism.png" alt="DMux4Way Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-4way-gate-test.png" alt="DMux4Way Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+                <section class="dmux8way">
+                        <h2 id ="dmux8way">DMux8Way Gate</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-8way-gate-hdl.png" alt="DMux4Way Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-8way-gate-logism.png" alt="DMux4Way Gate" style="width:100%">
+                                </div>
+                                <div class="column">
+                                    <img src="../images/nand-tetris-project-1/dmux-8way-gate-test.png" alt="DMux4Way Gate" style="width:100%">
+                                </div>
+                            </div>
+                </section>
+            <footer>
+                <p>Website Built By Colin McCullough Fall 2018</p>
+            </footer>
+    </div>
+  </body>
+</html>

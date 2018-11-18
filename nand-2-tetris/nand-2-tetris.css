@@ -1,0 +1,182 @@
+
+  .title {
+    background-color: rgb(184, 184, 184);
+    grid-area: 4  / 1 / 5 / 13;
+    position: relative;
+    text-align: center; 
+  }
+  .menuleft {
+    background-color: rgb(184, 184, 184);
+    grid-area: 5  / 1 / 9 / 5;
+    position: relative;
+    text-align: center;
+  }
+  .menucenter {
+    background-color: rgb(184, 184, 184);
+    grid-area: 5  / 5 / 9 / 9;
+    position: relative;
+    text-align: center;
+  }
+  .menuright {
+    background-color: rgb(184, 184, 184);
+    grid-area: 5  / 9 / 9 / 13;
+    position: relative;
+    text-align: center;   
+  }
+  .notgate {
+    background-color: rgb(53, 53, 53);
+    grid-area: 9  / 1 / 15 / 13;
+    position: relative;
+    text-align: center; 
+    padding-left: 30px;  
+  }
+  .andgate {
+    background-color: rgb(184, 184, 184);
+    grid-area: 15  / 1 / 22 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 30px;   
+  }
+  .orgate {
+    background-color: rgb(53, 53, 53);
+    grid-area: 22  / 1 / 29 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 30px;   
+  }
+  .xorgate {
+    background-color: rgb(184, 184, 184);
+    grid-area: 29  / 1 / 36 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 30px;
+  }
+  .muxgate {
+    background-color: rgb(53, 53, 53);
+    grid-area: 36  / 1 / 43 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 30px;
+  }
+  .dmuxgate {
+    background-color: rgb(184, 184, 184);
+    grid-area: 43 / 1 / 50 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 30px;
+  }
+  .not16gate {
+    background-color: rgb(53, 53, 53);
+    grid-area: 50 / 1 / 62 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .and16gate {
+    background-color: rgb(184, 184, 184);
+    grid-area: 62 / 1 / 73 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .or16gate {
+    background-color: rgb(53, 53, 53);
+    grid-area: 73 / 1 / 84 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .mux16gate {
+    background-color: rgb(184, 184, 184);
+    grid-area: 84 / 1 / 94 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  } 
+  .or8waygate {
+    background-color: rgb(53, 53, 53);
+    grid-area: 94 / 1 / 103 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .mux4way16 {
+    background-color: rgb(184, 184, 184);
+    grid-area: 103 / 1 / 112 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  } 
+  .mux8way16 {
+    background-color: rgb(53, 53, 53);
+    grid-area: 112 / 1 / 117 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  } 
+  .dmux4way {
+    background-color: rgb(184, 184, 184);
+    grid-area: 117 / 1 / 123 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .dmux8way {
+    background-color: rgb(53, 53, 53);
+    grid-area: 123 / 1 / 128 / 13;
+    position: relative;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  } 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 30.00%;
+    padding: 15px;
+  }
+.column2 {
+    float: left;
+    width: 46.00%;
+    padding: 15px;
+  } 
+.column1 {
+    float: left;
+    width: 40.00%;
+    padding: 15px;
+  }
+  .column3 {
+    float: left;
+    width: 40.00%;
+    padding: 15px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  footer {
+    background-color: rgb(36, 36, 36);
+    grid-area: 150/ 1 / 151 / 13;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  .title h1 {
+      font-size: 2em;
+  }
+
+  li {
+      font-size: 22px;
+  }
