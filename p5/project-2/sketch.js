@@ -156,5 +156,9 @@ var z = function( p ) { // p could be any variable name
       p.arc(i - 5, 205, 20, 25, p.HALF_PI, p.PI);
     }
     }
+    
   }
+
 var myp5 = new p5(z, 'sketch-holder-third-row');
+
+

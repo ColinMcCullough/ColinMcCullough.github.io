@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="pain.css" media="screen" rel="stylesheet" type="text/css" />
+    
+    <title>Reading Reflection: Inevitable Pain</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class ="background">
+            <h1>Reading Reflection: Inevitable Pain</h1>
+        </header>
+        <nav>
+          <div class="navbar">
+            <a href="../index.html">Home</a> 
+            <div class="dropdown">
+              <button class="dropbtn">Programming
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../scratch-programs/index.html">Scratch Programs</a>
+                <a href="../app-inventor/index.html">App Inventor</a>
+                <a href="../p5/project-2/index.html">P5.JS Programs</a>
+                <a href="../python/index.html">Python Programs</a>
+                <a href="../code-hs/index.html">Code HS</a>
+                <a href="../logism/index.html">Logism</a>
+                <a href="../nand-2-tetris/index.html">Nand to Tetris</a>                
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Reading Assignments
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="../code/index.html">CODE</a>
+                <a href="../dreaming-in-code/index.html">Dreaming In Code</a>
+                <a href="../mud-reflection/index.html">Reflection: "Big Ball of Mud"</a>
+                <a href="../devops-reflection/index.html">Reflection: Devops</a>
+                <a href="index.html">Reflection: Inevitable Pain</a>                
+              </div>
+            </div>
+            <a href="../graduate-programs/index.html">Graduate Programs</a>
+            <a href="../final-exam/index.html">Midterm / Final</a>
+          </div>
+        </nav>
+        <section class="content">
+            <p>“The Inevitable Pain of Software Development, Including of Extreme Programming, Caused by Requirements Volatility” by Daniel M. Berry discusses the pain of developing software with ever changing requirements. For some time now, programmers have been searching for a “Silver Bullet” to mitigate ever changing requirements causing volatile software through various methods, tools and languages.  Berry describes two essential aspects to building any Computer based system (CBS) -- “The Essence” which refers to all the requirements of the program, and “The Accident” which is the tools, methods and programming languages used to create “The Essence.” Various sets of tools and methodologies have been created to reduce the impact of how software is affected by ever changing requirements. However, a “Silver Bullet” that will give software the agility and flexibility it needs to adapt without self-destructing via bugs and conflicting code has eluded the programming world. Studies have shown that 80% of changes to existing software is from requirement changes while only 20% come from correcting errors. Many argue that the most difficult aspect of creating software is deciding precisely what to build in a way that can be adaptable to changing specs.</p>
+            <p>Various different programming methods and techniques have evolved over time that have helped reduce the impact of changing specs to software. The Belady-Lehman Graph, also known as the BL Upswing, represents the number of bugs over time based on a software’s release number. The curve shows that software is typically released with a large number of bugs and, as time goes by, the number of bugs drops significantly. After more time has passed, the curve takes a large upswing represented by more bugs that are typically caused by new requirements being implemented. “The Accidents” purpose is to tame the curve while keeping software running efficiently as requirements change.</p>
+            <p>One of the first methods developers used to build software was the “Build and Fix” model. Programmers would built, modify, operate and fix in a loop. Although this method was adequate, it typically released software with a lot of bugs due to lack of thorough testing prior to release. The “Waterfall Model” was built on the “Build and Fix” model by forcing understanding and documentation of the design before coding. Rewriting documentation is incredibly time consuming so this step was often skipped. It is also difficult to have everyone on a project fully understand all aspects of a spec prior to implementation. “Structured Programming” asked programmers to redo the entire structured development from the top downward, taking into account the new requirement and the old requirements in the right places during refinement. After a full assessment was made, the programmer would patch the code. The difficulty is that no matter how hard you look, some ripple effect gets overlooked. Patching also tends to destroy the relationship between structured development and code. “Requirements Engineering” (RE) is a method in which developers invest significant time looking at requirements before design and coding begins to anticipate all potential issues. From RE, two methods were developed to accomplish this goal. “Big Modeling Up Front (BMUF)” requires comprehensive models for the whole system up front. Once the models and specs are fully reviewed, validated, agreed to, and signed off by the customer and users, coding can begin. This model aims to anticipate all requirements up front, however, this is not realistic and inevitably specs end up changing. “Initial Requirements Up Front (IRUF)” is much more agile and only requires the CBS scope, initial requirements and a consensus among stakeholders as to what the requirements imply before coding can begin. IRUF tries to embrace change by building a more flexible framework that can be updated more easily. Extreme Programming (XP) is a lean, agile programming method that believes pre-planning is a waste of time. XP simply builds the requirements that are understood at the time that programming commences with requirements given in executable test cases, not specs. Some best practices for XP are to ensure code meets requirements through continual inspection, continual testing, and pair programming. The architecture of your software needs to remain flexible for change when using XP. If your architecture can’t handle the requirement, XP says code should be refactored. Refactoring can be very time consuming, so this tends to be the step that gets skipped in a time crunch although it is likely the most important step to maintaining XP’s integrity.</p>
+            <p>While many methods have been developed to help reduce the BL Upswing, each method tends to have one time consuming and painful step which, over time, will inevitably be skipped due to time constraints or the developers’ desire to find a quick patch. These skipped steps lead to conflicting code that becomes more difficult to maintain over time as bugs develop. Although programmers will always strive to find better methods to respond to changing requirements, “The Silver Bullet” has yet to be found and most believe it never will be.</p>
+        </section>
+        <footer>
+            <p>Website Built By Colin McCullough Fall 2018</p>
+        </footer>
+    </div>
+  </body>
+</html>
