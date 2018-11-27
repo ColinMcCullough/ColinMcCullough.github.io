@@ -10,7 +10,7 @@ var s = function( p ) { // p could be any variable name
     p.background(204);
     p.ellipse(50, 50, 80, 80);
   };
-};
+}
 var myp5 = new p5(s, 'sketch-holder-left');
 
 // Sketch Two
