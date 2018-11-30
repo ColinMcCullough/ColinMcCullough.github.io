@@ -12,6 +12,14 @@
     position: relative;
     text-align: center;
   }
+.uodescription a {
+    color:white; 
+    text-decoration: none;
+}
+.uodescription a:hover {
+  color: rgb(255, 0, 0); 
+
+}
   .uodescription h3{
     color: white;   
   }
@@ -21,6 +29,14 @@
     position: relative;
     text-align: center;
   }
+.osudescription a {
+    color:white; 
+    text-decoration: none;
+}
+.osudescription a:hover {
+  color: rgb(255, 0, 0); 
+
+}
   .osudescription h3{
     color: white;   
   }
