@@ -40,9 +40,21 @@
   .osudescription h3{
     color: white;   
   }
+.gradschooluo {
+  background-color: rgb(184, 184, 184);
+  grid-area: 12 / 1 / 17 / 7;
+  position: relative;
+  text-align: center;
+}
+.gradschoolosu {
+  background-color: rgb(184, 184, 184);
+  grid-area: 12 / 7 / 17 / 13;
+  position: relative;
+  text-align: center;
+}
   .lifefactors {
     background-color: rgb(218, 218, 218);
-    grid-area: 12 / 1 / 17 / 13;
+    grid-area: 17 / 1 / 22 / 13;
     position: relative;
     text-align: center;
     padding: 50px;
@@ -59,14 +71,14 @@
   
   .gradtable {
     background-color: rgb(184, 184, 184);
-    grid-area: 17 / 1 / 41 / 13;
+    grid-area: 22 / 1 / 43 / 13;
     position: relative;
     text-align: center;
     padding: 50px;
   }
 
   footer {
-    grid-area: 41 / 1 / 42 / 13;
+    grid-area: 43 / 1 / 44 / 13;
   
   }
   footer p {
