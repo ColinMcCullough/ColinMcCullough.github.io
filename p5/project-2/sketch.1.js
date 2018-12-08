@@ -68,8 +68,8 @@ var a = function( p ) { // p could be any variable name
 
   var rad = 10; // Width of the shape ball
   var xpos, ypos; // Starting position of ball
-  var xspeed = 3.8; // Speed of the ball
-  var yspeed = 3.2; // Speed of the ball
+  var xspeed = 4.8; // Speed of the ball
+  var yspeed = 4.2; // Speed of the ball
   var xdirection = 1; // Left or Right(ball)
   var ydirection = 1; // Top to Bottom(ball)
   var bgColor = 'black'; // background color

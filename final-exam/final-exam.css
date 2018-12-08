@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
+    grid-gap: 0px;
+    grid-template: repeat(16, 100px) / repeat(12, 1fr);
+}
+.embeddoc {
+    background-color: rgb(184, 184, 184);
+    grid-area: 4 / 1 / 16 / 13;
+    position: relative;
+    text-align: center;
+    padding: 50px;
+}
+.embeddoc a {
+    color:white; 
+    text-decoration: none;
+}
+.embeddoc a:hover {
+    color: rgb(255, 0, 0); 
+  
+}
+
+footer {
+    background-color: rgb(36, 36, 36);
+    grid-area: 16/ 1 / 17 / 13;
+    color: white;
+    text-align: center;
+    position: relative;
+}

@@ -6,12 +6,12 @@
     grid-gap: 0px;
     grid-template: repeat(41, 100px) / repeat(12, 1fr);
   }
-  .uodescription{
+.uodescription{
     background-color: rgb(53, 53, 53);
     grid-area: 4 / 1 / 12 / 7;
     position: relative;
     text-align: center;
-  }
+}
 .uodescription a {
     color:white; 
     text-decoration: none;
@@ -20,9 +20,9 @@
   color: rgb(255, 0, 0); 
 
 }
-  .uodescription h3{
+.uodescription h3{
     color: white;   
-  }
+}
   .osudescription{
     background-color: rgb(53, 53, 53);
     grid-area: 4 / 7 / 12/ 13;
