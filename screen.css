@@ -1,3 +1,10 @@
+.mySlides {
+  display:none;
+}
+.w3-center {display:inline-block;width:auto}
+.w3-center {text-align:center}
+.w3-center{text-align:center!important}
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}
 
 #main {
   padding: 0px; }
@@ -15,12 +22,12 @@ ul {
   list-style: square;
   line-height: 2;
   list-style-position: inside
-  }
- .left ul {
+}
+.left ul {
   text-align: left;
   padding-right: 20px;
   font-size: 18px; 
- } 
+} 
 
 
 a img {
@@ -39,12 +46,13 @@ h1 {
     display: inline-block;
     color: white;
     text-align: center;
-  }
+}
 
 a {
   color: black; }
   a:hover {
-    color: red; }
+    color: red; 
+}
 
 .container {
   display: grid;

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <link href="screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    
     <title>Colin McCullough | CIS 160 Portfolio</title>
   </head>
   <body>
@@ -66,14 +69,29 @@
               <li>Demonstrate understanding of software engineering challenges and job roles as presented in the book "Dreaming in Code."</li>
             </ul>
         </section>
-        <div class="overlap">
-            <img class="image" src="images/books.jpg" height="454" width="600"/> 
-          </div>
-        <section class="right">
-            <h2>CS160 Assigned Books</h2>
-            <br>
+          <section class="right">
+              <h2 class="w3-center">CS160 Books</h2>
+              <div class="w3-content w3-section" style="max-width:400px">
+                <img class="mySlides" src="images/CODEBook.png" style="width:100%">
+                <img class="mySlides" src="images/dreaming in code.jpg" style="width:100%">
+              </div> 
+          </section>
+        <script>
+            var myIndex = 0;
+            carousel();
             
-        </section>
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
         <footer>
             <p>Website Built By Colin McCullough Fall 2018</p>
           </footer>
