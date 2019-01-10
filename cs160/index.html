@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    
+    <title>Colin McCullough | CIS 160 Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+        <header class ="background">
+            <h1>Colin McCullough CS160 Portfolio</h1>
+        </header>
+        <nav>
+            <div class="navbar">
+              <a href="index.html">Home</a> 
+              <div class="dropdown">
+                <button class="dropbtn">Programming
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="scratch-programs/index.html">Scratch Programs</a>
+                  <a href="app-inventor/index.html">App Inventor</a>
+                  <a href="p5/project-2/index.html">P5.JS Programs</a>
+                  <a href="python/index.html">Python Programs</a>
+                  <a href="code-hs/index.html">Code HS</a>
+                  <a href="logism/index.html">Logism</a>
+                  <a href="nand-2-tetris/index.html">Nand to Tetris</a>
+                  <a href="robot-treasure-hunt/index.html">Robot Treasure Hunt</a>                 
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Reading Assignments
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="code/index.html">CODE</a>
+                  <a href="dreaming-in-code/index.html">Dreaming In Code</a>
+                  <a href="mud-reflection/index.html">Reflection: "Big Ball of Mud"</a>
+                  <a href="devops-reflection/index.html">Reflection: Devops</a>
+                  <a href="inevitable-pain/index.html">Reflection: Inevitable Pain</a>
+                  <a href="software-is-hard/index.html">Reflection: Software Is Hard</a>               
+                </div>
+              </div>
+              <a href="graduate-programs/index.html">Graduate Programs</a>
+              <div class="dropdown">
+                <button class="dropbtn">Final/Rubrics
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="midterm-rubric/index.html">Midterm Rubric</a>
+                  <a href="final-rubric/index.html">Full Term Rubric</a>
+                  <a href="final-exam/index.html">Final Exam</a>            
+                </div>
+              </div>
+            </div>
+        </nav>
+        <section class="left">
+            <h2>Course Description</h2> 
+            <p>A broad overview of the discipline of computer science. Students learn about the foundations of computer science such as problem solving and algorithms, 
+               programming concepts, and computer hardware. Students also research careers available in computer science, research pathways to computer careers, and reflect on some of the influences computers have had and continue to have on society. Students also write programs in a variety of programming languages.</p>
+          <h2>Learning Outcomes</h2> 
+            <ul>
+              <li>Describe computer science degree pathways of at least two graduate degree granting educational institutions with sufficient detail.</li>
+              <li>Demonstrate knowledge of introductory programming concepts in at least two programming environments.</li>
+              <li>Demonstrate knowledge  of computer careers available to computer science majors (and the programming roles presented in “Dreaming in Code.”)</li>
+              <li>Demonstrate understanding of software engineering challenges and job roles as presented in the book "Dreaming in Code."</li>
+            </ul>
+        </section>
+          <section class="right">
+              <h2 class="w3-center">CS160 Books</h2>
+              <div class="w3-content w3-section" style="max-width:420px">
+                <img class="mySlides" src="images/CODEBook.png" style="width:100%">
+                <img class="mySlides" src="images/dreaming in code.jpg" style="width:100%">
+              </div> 
+          </section>
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
+        <footer>
+            <p>Website Built By Colin McCullough Fall 2018</p>
+          </footer>
+    </div>
+  </body>
+</html>
