@@ -161,6 +161,7 @@ footer {
 .dropdown {
   float: left;
   overflow: hidden;
+
 }
 
 /* Dropdown button */
@@ -194,7 +195,7 @@ footer {
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 10px 0px;
+  padding: 5px 0px;
   text-decoration: none;
   display: block;
   text-align: left;
