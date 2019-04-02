@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../cs160/screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    
+    <title>Colin McCullough | CIS 162 Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+        <header class ="background">
+            <h1>Colin McCullough CS162 Portfolio</h1>
+        </header>
+        <nav>
+            <div class="navbar">
+              <a href="../index.html">Home</a>
+              <a href="index.html">CS162 Home</a>
+              <div class="dropdown">
+                <button class="dropbtn">BlueJ Exercises
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="bluej-exercises/chapterfive.html">Chapter 5</a>           
+                </div>
+              </div>
+            </div>
+        </nav>
+        <section class="left">
+            <h2>CS 162 Course Description</h2> 
+                <p>This class will review briefly CS161 and continue programming in Java. The emphasis of this term is on the development of classes, data structures, algorithm analysis, recursion, and sorting. However we will also explore/review several basic programming constructs, Inheritance, Polymorphism, Interfaces, Exceptions, and Files/Streams.</p>
+            <h2>CS 162 Learning Outcomes</h2> 
+                <ul>
+                  <li>Create proper program documentation</li>
+                  <li>Use a subset of the Java collections classes</li>
+                  <li>Understand and select appropriate Java collections classes</li>
+                  <li>Design OOP software with use of interfaces, abstract classes, inheritance, and polymorphism</li>
+                  <li>Explore basic data structures (stacks, queues, linked lists, etc.)</li>
+                  <li>Write a simple sorting algorithm</li>
+                  <li>Identify the Big O of simple algorithms</li>
+                </ul>
+        </section>
+          <section class="right">
+                <h2 class="w3-center">CS161/CS162 Books</h2>
+                <div class="w3-content w3-section" style="max-width:350px">
+                  <img src="../cs161/images/9781292159041.jpg" style="width:100%">
+                </div>  
+          </section>
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
+        <footer>
+            <p>Website Built By Colin McCullough Fall 2018</p>
+          </footer>
+    </div>
+  </body>
+</html>
