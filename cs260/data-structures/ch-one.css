@@ -1,0 +1,20 @@
+.embeddoc {
+    grid-area: 4 / 1 / 16 / 7;
+}
+
+.embeddoc1 {
+    grid-area: 4 / 7 / 16 / 13;
+    background-color: rgb(184, 184, 184);
+    position: relative;
+    text-align: center;
+    padding: 50px;
+}
+
+.embeddoc1 a {
+    color:white; 
+    text-decoration: none;
+}
+.embeddoc1 a:hover {
+    color: rgb(255, 0, 0); 
+  
+}
