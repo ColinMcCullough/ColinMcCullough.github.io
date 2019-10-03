@@ -139,6 +139,3 @@ class Fraction:
     def __repr__(self):
         """Overrides __repr_ method"""
         return '{}State: {}'.format(self.__class__, self.__str__())
-
-
-
