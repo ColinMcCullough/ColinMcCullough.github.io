@@ -11,7 +11,8 @@ class Fraction:
             bottom {integer} -- denominator in a fraction
         Raises: TypeError if parameters are not integers
         """
-        if type(top) != int or type(bottom) != int:
+        #if type(top) != int or type(bottom) != int:
+        if not isinstance(top,int) or not isinstance(bottom,int):
             raise TypeError('Incorrect type passed in')
         if top < 0 and bottom < 0:
             top = abs(top)
@@ -102,27 +103,29 @@ class Fraction:
 
     def __ge__(self,f2):
         """Overrides greater than or equal method"""
-        return self.__num * f2.den >= self.__den * f2.num
+        return self > f2 or self == f2
     
     def __lt__(self,f2):
         """Overrides greater than or equal method"""
-        return self.__num * f2.den < self.__den * f2.num
+        return not self > f2
 
     def __le__(self,f2):
         """Overrides greater than or equal method"""
-        return self.__num * f2.den <= self.__den * f2.num
+        return not self > f2 or self == f2
     
     def __ne__(self,f2):
         """Overrides greater than or equal method"""
-        return self.__num * f2.den != self.__den * f2.num
+        return not f2 == self
+        #return self.__num * f2.den != self.__den * f2.num
     def __radd__(self,num):
         """Overrides __radd_ method"""
         if num == 0:
             return self
-        elif type(num) == int and num > 0:
+        #elif type(num) == int and num > 0:
+        elif isinstance(num,int) and num > 0:
             num = Fraction(num,1)
             return self.__add__(num)
-        elif type(num) != int:
+        elif not isinstance(num,int): 
             raise TypeError('Incorrect type passed in')
     def __iadd__(self,num):
         """Overrides __iadd_ method"""
