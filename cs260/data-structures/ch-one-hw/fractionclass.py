@@ -86,12 +86,10 @@ class Fraction:
             num {integer}
             den {integer}
         """
-        while num%den != 0:
-            oldnum = num
-            oldden= den
-            num = oldden
-            den = oldnum%oldden
-        return den
+        if(den==0): 
+            return num
+        else: 
+            return self.gcd(den,num%den) 
 
     def __eq__(self,f2):
         """Method to show if the fractions of 2 fraction objects are equal"""
