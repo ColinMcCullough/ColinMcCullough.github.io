@@ -194,13 +194,5 @@ class TestStringMethods(unittest.TestCase):
         self.cdll.add('a')
         self.assertEqual(str(self.cdll),"[a,b,c,d]")
 
-
-        
-        
-
-
-    
-
-
 if __name__ == '__main__':
     unittest.main()
