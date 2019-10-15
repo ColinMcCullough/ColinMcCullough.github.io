@@ -9,6 +9,8 @@ class TestStringMethods(unittest.TestCase):
     def test_tokenize(self):
         self.assertEqual(tokenize('1*(22+3)/5'), ['1', '*', '(', '22', '+', '3', ')', '/', '5'])
         self.assertEqual(tokenize('1  + 1'), ['1', '+', '1'])
+        self.assertEqual(tokenize('1 ** 1'), ['1', '**', '1'])
+        self.assertEqual(tokenize('1 // 1'), ['1', '//', '1'])
         self.assertEqual(tokenize('244+( 77 / 3) * 4'), ['244', '+', '(','77','/','3',')','*','4'])  
         self.assertEqual(tokenize(''), [])
     
@@ -22,6 +24,8 @@ class TestStringMethods(unittest.TestCase):
             infixToPostfix('1*(22+3))/5')
         self.assertEqual(infixToPostfix('1 * 5'),'1 5 *')
         self.assertEqual(infixToPostfix('(1 - 3) * (6*4)'),'1 3 - 6 4 * *')
+        self.assertEqual(infixToPostfix('4 ** 2 + 5'),'4 2 ** 5 +')
+        self.assertEqual(infixToPostfix('3 * 4 - 5 // 5'),'3 4 * 5 5 // -')  
         self.assertEqual(infixToPostfix('1*(22+3)/5'),'1 22 3 + * 5 /')
     
     def test_postfixEval(self):
@@ -30,6 +34,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(postfixEval('1 5 *'),5)
         self.assertEqual(postfixEval('1 3 - 6 4 * *'),-48)
         self.assertEqual(postfixEval('1 22 3 + * 5 /'),5.0)
+        self.assertEqual(postfixEval('3 ** 2'),9)
+        self.assertEqual(postfixEval('3 // 2'),1)
     
     def test_doMath(self):
         with self.assertRaises(Exception):

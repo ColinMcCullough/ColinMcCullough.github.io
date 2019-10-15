@@ -8,7 +8,7 @@ def tokenize(exp):
     Return:
         {List} - list of expression
     """
-    x = re.split(r'(\d+|[a-zA-Z]|[^A-Za-z0-9])', exp)
+    x = re.split(r'(\d+|\*+|\/+|[a-zA-Z]|[^A-Za-z0-9])', exp)
     return [i for i in x if i.strip()] 
 
 def checkbalance(tokenlist):
@@ -28,8 +28,10 @@ def infixToPostfix(infixexpr):
         postfixexpr {String}
     """
     prec = {}
+    prec["**"] = 4
     prec["*"] = 3
     prec["/"] = 3
+    prec["//"] = 3
     prec["+"] = 2
     prec["-"] = 2
     prec["("] = 1
@@ -93,6 +95,8 @@ def doMath(op, op1, op2):
     if not isinstance(op,str) or not isinstance(op1,int) or not isinstance(op2,int):
         raise TypeError('incorrect parameter type')
     dictionary = {
+        '**': lambda op1,op2: op1 ** op2,
+        '//': lambda op1,op2: op1 // op2,
         '*': lambda op1,op2: op1 * op2,
         '/': lambda op1,op2: op1 / op2,
         '+': lambda op1,op2: op1 + op2,
@@ -101,3 +105,5 @@ def doMath(op, op1, op2):
     if op not in dictionary:
         raise ArithmeticError('parameter must be *,/,-,+')
     return dictionary[op](op1, op2)
+
+print(infixToPostfix('3 * 4 - 5 // 5'))
