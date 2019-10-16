@@ -34,8 +34,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(postfixEval('1 5 *'),5)
         self.assertEqual(postfixEval('1 3 - 6 4 * *'),-48)
         self.assertEqual(postfixEval('1 22 3 + * 5 /'),5.0)
-        self.assertEqual(postfixEval('3 ** 2'),9)
-        self.assertEqual(postfixEval('3 // 2'),1)
+        self.assertEqual(postfixEval('3 2 **'),9)
+        self.assertEqual(postfixEval('3 2 //'),1)
     
     def test_doMath(self):
         with self.assertRaises(Exception):

@@ -27,14 +27,15 @@ def infixToPostfix(infixexpr):
     Returns:
         postfixexpr {String}
     """
-    prec = {}
-    prec["**"] = 4
-    prec["*"] = 3
-    prec["/"] = 3
-    prec["//"] = 3
-    prec["+"] = 2
-    prec["-"] = 2
-    prec["("] = 1
+    prec = {
+        '**': 4,
+        '//': 3,
+        '*': 3,
+        '/': 3,
+        '+': 2,
+        '-': 2,
+        '(': 1
+    }
     opStack = Stack()
     postfixList = []
     tokenList = tokenize(infixexpr)
@@ -106,4 +107,5 @@ def doMath(op, op1, op2):
         raise ArithmeticError('parameter must be *,/,-,+')
     return dictionary[op](op1, op2)
 
-print(infixToPostfix('3 * 4 - 5 // 5'))
+#print(infixToPostfix('3 * 4 - 5 // 5'))
+print(doMath('**',3,2))
