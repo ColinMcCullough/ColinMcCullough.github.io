@@ -1,0 +1,19 @@
+.embeddoc {
+    grid-area: 4 / 1 / 14 / 14;
+}
+
+footer {
+    grid-area: 14 / 1 / 15 / 13;
+}
+
+.embeddoc1 a {
+    color:white; 
+    text-decoration: none;
+}
+.embeddoc1 a:hover {
+    color: rgb(255, 0, 0); 
+  
+}
+.container {
+    grid-template: repeat(14, 100px) / repeat(12, 1fr);
+}
