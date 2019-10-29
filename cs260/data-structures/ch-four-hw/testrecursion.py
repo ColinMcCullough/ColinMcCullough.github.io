@@ -6,7 +6,7 @@ from timeit import Timer
 import time 
 
 class TestStringMethods(unittest.TestCase): 
-    """Unit tests for Fractions Class
+    """Unit tests for Recursion methods
     Arguments:
         unittest {unittest}
     """
@@ -14,7 +14,7 @@ class TestStringMethods(unittest.TestCase):
         self.t = turtle.Turtle()
     
     def test_get_factorial(self):
-        """Tests Fraction object properties""" 
+        """Tests Recursion object properties""" 
         with self.assertRaises(ValueError):
             get_factorial(-1)
         self.assertEqual(get_factorial(0),1)

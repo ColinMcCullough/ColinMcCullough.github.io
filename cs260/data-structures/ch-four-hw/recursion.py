@@ -126,6 +126,78 @@ def time_test_fib(n):
     non_recursive_time = stop - strt
     return f'Recursive Time:{recursive_time}, Non Recursive:{non_recursive_time}'
 
+#Exercise 7
+def hilbert_curv(t,width,incr):
+    
+    if t.position() == (width/2,-(width/2)):
+        return True
+    else:
+        if t.heading() == 0.0:
+            t.forward(incr)
+            t.left(90)
+            t.forward(incr)
+            t.left(90)
+            t.forward(incr)
+            t.right(90)
+            t.forward(incr)
+            hilbert_curv(t,width,incr)
+        elif t.heading() == 90.0:
+            t.forward(incr)
+            t.right(90)
+            t.forward(incr)
+            t.right(90)
+            t.forward(incr)
+            t.left(90)
+            hilbert_curv(t,width,incr)
+        
+
+def run_hilbert(tot_width):
+    length = 10
+    if ((tot_width // length) % 4) != 0:
+        raise Exception('bad width, must be divisible by 5')
+    t = turtle.Turtle()
+    myWin = turtle.Screen()
+    t.left(90)
+    t.pensize(1) 
+    t.up()
+    t.backward(tot_width/2)
+    t.right(90)
+    t.backward(tot_width/2)
+    t.down()
+    t.color("black")
+    hilbert_curv(t,tot_width,length)
+
+#run_hilbert(400)
+
+from turtle import Screen, Turtle
+
+def hilbert_curve(turtle, A, parity, n):
+
+    if n < 1:
+        return
+
+    turtle.left(parity * 90)
+    hilbert_curve(turtle, A, - parity, n - 1)
+    turtle.forward(A)
+    turtle.right(parity * 90)
+    hilbert_curve(turtle, A, parity, n - 1)
+    turtle.forward(A)
+    hilbert_curve(turtle, A, parity, n - 1)
+    turtle.right(parity * 90)
+    turtle.forward(A)
+    hilbert_curve(turtle, A, - parity, n - 1)
+    turtle.left(parity * 90)
+
+screen = Screen()
+
+yertle = Turtle()
+yertle.speed('fastest')  # because I have no patience
+
+hilbert_curve(yertle, 10, 1, 4)
+
+screen.exitonclick()
+
+
 #Exercise 9,10
 '''
 Write a program to solve the following problem: You have two jugs: a 4-gallon jug and a 3-gallon jug. 
