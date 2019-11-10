@@ -43,7 +43,7 @@ def infixToPostfix(infixexpr):
         raise Exception('Unbalanced parenthesis')
 
     for token in tokenList:
-        if token in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or bool(re.search(r'(\d+)', token)):
+        if bool(re.search(r'(\d+|[A-Z]|[a-z])', token)):
             postfixList.append(token)
         elif token == '(':
             opStack.push(token)
@@ -93,8 +93,15 @@ def doMath(op, op1, op2):
         op2 {Integer} -- right operand
     """
     
-    if not isinstance(op,str) or not isinstance(op1,int) or not isinstance(op2,int):
-        raise TypeError('incorrect parameter type')
+    if not isinstance(op,str) or \
+        not isinstance(op1,int) and not isinstance(op1,float) or\
+        not isinstance(op2,int) and not isinstance(op2,float):
+
+        raise TypeError('incorrect op parameter type')
+    if not isinstance(op1,int) and not isinstance(op1,float):
+        raise TypeError('incorrect op1 parameter type')
+    if not isinstance(op2,int) and not isinstance(op2,float):
+        raise TypeError('incorrect op2 parameter type')
     dictionary = {
         '**': lambda op1,op2: op1 ** op2,
         '//': lambda op1,op2: op1 // op2,
@@ -107,5 +114,7 @@ def doMath(op, op1, op2):
         raise ArithmeticError('parameter must be *,/,-,+')
     return dictionary[op](op1, op2)
 
-#print(infixToPostfix('3 * 4 - 5 // 5'))
-print(doMath('**',3,2))
+x = infixToPostfix('a*b*c*d+e+f')
+print(x)
+y = postfixEval('1 2 3 4 5 * + * +')
+print(y)

@@ -10,4 +10,6 @@ def insertionSort(alist):
 
         alist[position]=currentvalue
 
+insertionSort([6,1,4,9,15,3,2])
+
 
