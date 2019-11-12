@@ -24,6 +24,8 @@ class BinaryTreeTests(unittest.TestCase):
         assert self.bst.root.key == 50
         assert self.bst.root.leftChild.key == 10
         assert self.bst.root.rightChild.key == 70
+        self.bst.put(45,'override')
+        assert self.bst.get(45) == 'override'
         
     def testputoper(self):
         print('testputoper')
@@ -92,6 +94,10 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(15,'e')
         self.bst.put(45,'f')
         assert self.bst.length() == 7
+        self.bst.put(45,'override')
+        self.bst.put(15,'override2')
+        assert self.bst.length() == 7
+
         
     def testDelete(self):
         print('testing delete')
@@ -252,6 +258,8 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(6,6)
         self.bst.delete(7)
         assert self.bst.root.leftChild.key == 5
+        assert self.bst.root.leftChild.successor == self.bst.root.leftChild.rightChild
+        assert self.bst.root.leftChild.successor.key == 6
         assert self.bst.root == self.bst.root.leftChild.parent
         assert self.bst.root.leftChild.leftChild.key == 1
         assert self.bst.root.leftChild.rightChild.key == 6
@@ -265,6 +273,8 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(13,13)
         self.bst.delete(15)
         assert self.bst.root.rightChild.key == 12
+        assert self.bst.root.successor == self.bst.root.rightChild
+        assert self.bst.root.rightChild.successor == self.bst.root.rightChild.rightChild
         assert self.bst.root.rightChild.parent == self.bst.root
         assert self.bst.root.rightChild.leftChild.key == 11
         assert self.bst.root.rightChild.rightChild.key == 13
@@ -278,6 +288,10 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(9,9)
         self.bst.delete(6)
         assert self.bst.root.leftChild.key == 8
+        assert self.bst.root.leftChild.successor == self.bst.root.leftChild.rightChild
+        assert self.bst.root.leftChild.leftChild.successor == self.bst.root.leftChild
+        assert self.bst.root.leftChild.successor.key == 9
+        assert self.bst.root.leftChild.leftChild.successor.key == 8
         assert self.bst.root.leftChild.parent == self.bst.root
         assert self.bst.root.leftChild.leftChild.key == 7
         assert self.bst.root.leftChild.rightChild.key == 9
@@ -291,6 +305,9 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(22,22)
         self.bst.delete(15)
         assert self.bst.root.rightChild.key == 20
+        assert self.bst.root.rightChild.successor == self.bst.root.rightChild.rightChild
+        assert self.bst.root.rightChild.leftChild.successor == self.bst.root.rightChild
+        assert self.bst.root.successor == self.bst.root.rightChild
         assert self.bst.root.rightChild.parent == self.bst.root
         assert self.bst.root.rightChild.rightChild.key == 22
         assert self.bst.root.rightChild.leftChild.key == 17
@@ -302,9 +319,11 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(22,22)
         self.bst.delete(10)
         assert self.bst.root.key == 20
+        assert self.bst.root.successor == self.bst.root.rightChild
         assert self.bst.root.leftChild.parent == self.bst.root
         assert self.bst.root.rightChild.parent == self.bst.root
         assert self.bst.root.leftChild.key == 17
+        assert self.bst.root.leftChild.successor == self.bst.root
         assert self.bst.root.rightChild.key == 22
 
     def testCase6(self):

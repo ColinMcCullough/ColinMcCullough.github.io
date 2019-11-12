@@ -7,6 +7,11 @@ Evercise # 4: Modify the code for a binary search tree to make it threaded. Writ
 inorder traversal method for the threaded binary search tree. A threaded binary tree
 maintains a reference from each node to its successor.
 Answer: Look at function nonrecinorderwithsuccessorprop()
+
+Evercise # 5: Modify our implementation of the binary search tree so that it handles duplicate 
+keys properly. That is, if a key is already in the tree then the new payload should replace the 
+old rather than add another node with the same key.
+Answer: Updated put() method and _put() method to override value and not increase size property
 '''
 
 
@@ -65,11 +70,13 @@ class BinarySearchTree:
             key {Object} -- key to access value
             val {Object} -- value
         """
+        #replacing value
+        if not key in self:
+            self.size +=  1
         if self.root:
             self._put(key,val,self.root)
         else:
             self.root = TreeNode(key,val)
-        self.size = self.size + 1
 
     def _put(self,key,val,currentNode):
         """Helper method for put() when not updating root
@@ -77,7 +84,9 @@ class BinarySearchTree:
             key {Object} -- key to access value
             val {Object} -- value
         """
-        if key < currentNode.key:
+        if key == currentNode.key:
+            currentNode.payload = val
+        elif key < currentNode.key:
             if currentNode.hasLeftChild():
                 self._put(key,val,currentNode.leftChild)
             else:
@@ -490,7 +499,8 @@ x.put(2,'d')
 x.put(8,'e')
 x.put(7,'e')
 x.put(9,'f')
-x.nonrecinorder()
-x.nonrecinorderwithsuccessorprop()
+x[9] = 'replace'
+#x.nonrecinorder()
+#x.nonrecinorderwithsuccessorprop()
 ### Local Variables:
 ### End:
