@@ -1,14 +1,11 @@
 import unittest
 from binarysearchtree import *
 
-
-
 class BinaryTreeTests(unittest.TestCase):
     def setUp(self):
         self.bst = BinarySearchTree()
         
     def testgetput(self):
-        print('testgetput')
         self.bst.put(50,'a')
         self.bst.put(10,'b')
         self.bst.put(70,'c')
@@ -16,7 +13,11 @@ class BinaryTreeTests(unittest.TestCase):
         self.bst.put(85,'d')
         self.bst.put(15,'e')
         self.bst.put(45,'f')
-        print(self.bst.get(50))
+        lst = []
+        for i in self.bst:
+            lst.append(i)
+        #tests inserted in correct positon
+        self.assertEqual(lst,[10, 15, 30, 45, 50, 70, 85])
         assert self.bst.get(50) == 'a'
         assert self.bst.get(45) == 'f'
         assert self.bst.get(85) == 'd'
@@ -31,6 +32,8 @@ class BinaryTreeTests(unittest.TestCase):
         print('testputoper')
         self.bst[25] = 'g'
         assert self.bst[25] == 'g'
+        self.bst[25] = 'override'
+        assert self.bst[25] == 'override'
         
     def testFindSucc(self):
         print('testing findSucc')
@@ -202,7 +205,7 @@ class BinaryTreeTests(unittest.TestCase):
 
     def testLarge(self):
         import random
-        print('testing a large random tree')
+
         i = 0
         randList = []
         while i < 10000:
@@ -210,7 +213,7 @@ class BinaryTreeTests(unittest.TestCase):
             if nrand not in randList:
                 randList.append(nrand)
                 i += 1
-        print(randList)
+
         for n in randList:
             self.bst.put(n,n)
         sortList = randList[:]
@@ -346,8 +349,5 @@ class BinaryTreeTests(unittest.TestCase):
         with self.assertRaises(KeyError):
              self.bst.delete(5)
 
-
 if __name__ == '__main__':
-    import platform
-    print(platform.python_version())
     unittest.main()

@@ -14,8 +14,6 @@ old rather than add another node with the same key.
 Answer: Updated put() method and _put() method to override value and not increase size property
 '''
 
-
-
 class BinarySearchTree:
     """Binary Seach Tree Class
 
@@ -279,13 +277,14 @@ class BinarySearchTree:
         visited = []
         while tree != None:
 
-            if tree.hasLeftChild()  and tree.leftChild.key not in visited:
+            if tree.hasLeftChild() and tree.leftChild.key not in visited:
                 tree = tree.leftChild
 
             else: #tree.leftChild == None or tree == self.root or tree.leftChild.key in visited:
                 visited.append(tree.key)
                 print(tree.key)
                 tree = tree.findSuccessor()
+
         # return value for testing purposes only
         return visited
     
@@ -294,14 +293,15 @@ class BinarySearchTree:
         tree = self.root
         visited = []
         while tree != None:
-
-            if tree.hasLeftChild()  and tree.leftChild.key not in visited:
+            #has left child and has not been visited
+            if tree.hasLeftChild() and tree.leftChild.key not in visited:
                 tree = tree.leftChild
 
-            else: #tree.leftChild == None or tree == self.root or tree.leftChild.key in visited:
+            else: 
                 visited.append(tree.key)
                 print(tree.key)
                 tree = tree.successor
+
         # return value for testing purposes only
         return visited       
 
@@ -329,6 +329,22 @@ class BinarySearchTree:
 
                 
 class TreeNode:
+    """Tree Node Class
+        Interface:
+            hasLeftChild()
+            hasRightChild()
+            isLeftChild()
+            isRightChild()
+            isRoot()
+            isLeaf()
+            hasAnyChildren()
+            hasBothChildren()
+            replaceNodeData(key,value,leftchild,rightchild,successor)
+            findSuccessor()
+            spliceOut()
+            findMin()
+            __iter__()
+    """    
     def __init__(self,key,val,left=None,right=None,parent=None,successor=None):
         self.key = key
         self.payload = val
@@ -445,8 +461,7 @@ class TreeNode:
         return parent
 
     def spliceOut(self):
-        """Removes Tree Node from BST 
-        """
+        """Removes Tree Node from BST """
         if self.isLeaf():
             if self.isLeftChild():
                 self.parent.leftChild = None
@@ -490,17 +505,3 @@ class TreeNode:
             if self.hasRightChild():
                 for elem in self.rightChild: #recursively goes down right child
                     yield elem
-
-x = BinarySearchTree()
-x.put(10,'a')
-x.put(15,'b')
-x.put(6,'c')
-x.put(2,'d')
-x.put(8,'e')
-x.put(7,'e')
-x.put(9,'f')
-x[9] = 'replace'
-#x.nonrecinorder()
-#x.nonrecinorderwithsuccessorprop()
-### Local Variables:
-### End:

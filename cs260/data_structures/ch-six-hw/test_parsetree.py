@@ -1,7 +1,7 @@
 from parsetree import *
 import unittest
 
-class BinaryTreeTests(unittest.TestCase):
+class BinaryParseTreeTests(unittest.TestCase):
 
     def test_build_parse_tree(self):
         x = build_parse_tree('(1+1)')
@@ -55,6 +55,22 @@ class BinaryTreeTests(unittest.TestCase):
         self.assertEqual(postordereval(b),False)
         self.assertEqual(postordereval(c),True)
         self.assertEqual(postordereval(d),True)
+    
+    def test_printexp(self):
+        x = build_parse_tree('(1 + 1)')
+        y = build_parse_tree('((10 * 6) + (4 / 4))')
+        z = build_parse_tree('(1 < 1)')
+        a = build_parse_tree('(not(1 < 1))')
+        b = build_parse_tree('((5 < 6) and (5 > 6))')
+        c = build_parse_tree('((5 < 6) and (5 > 3))')
+        d = build_parse_tree('((5 < 6) or (5 > 6))')
+        self.assertEqual(printexp(x),'( 1 + 1 )')
+        self.assertEqual(printexp(y),'(( 10 * 6 )+( 4 / 4 ))')
+        self.assertEqual(printexp(z),'( 1 < 1 )')
+        self.assertEqual(printexp(a),'(( 1 < 1 )not ')
+        self.assertEqual(printexp(b),'(( 5 < 6 )and( 5 > 6 ))')
+        self.assertEqual(printexp(c),'(( 5 < 6 )and( 5 > 3 ))')
+        self.assertEqual(printexp(d),'(( 5 < 6 )or( 5 > 6 ))')
 
 
 if __name__ == '__main__':

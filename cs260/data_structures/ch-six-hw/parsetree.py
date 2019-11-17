@@ -11,6 +11,9 @@ not have spaces between every character.
 Exercise 2: Modify the build_parse_tree and evaluate functions to handle boolean statements
 (and, or, and not). Remember that “not” is a unary operator, so this will complicate your
 code somewhat.
+
+Exercise 7: Clean up the print_exp function so that it does not include an ‘extra’ set of parentheses
+around each number.
 '''
 
 def build_parse_tree(fpexp):
@@ -130,13 +133,13 @@ def printexp(tree):
         {String}
     """
     sVal = ""
-    if tree:
-        sVal = '(' + printexp(tree.getLeftChild())
+    if tree:  
+        sVal = '(' + printexp(tree.getLeftChild()) if tree.leftChild else ' ' + printexp(tree.getLeftChild())
         sVal = sVal + str(tree.getRootVal())
-        sVal = sVal + printexp(tree.getRightChild())+')'
+        sVal = sVal + printexp(tree.getRightChild())+')' if tree.rightChild else sVal + printexp(tree.getRightChild()) + ' '
     return sVal
 
-pt = build_parse_tree('((5 < 6) or (5 > 6))')
+pt = build_parse_tree('((8 * 5) + (4 * 4))')
 print(printexp(pt))
 x = postordereval(pt)
 print(x)
