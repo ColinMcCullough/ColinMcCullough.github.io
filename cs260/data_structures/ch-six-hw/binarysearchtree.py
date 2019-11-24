@@ -68,7 +68,7 @@ class BinarySearchTree:
             key {Object} -- key to access value
             val {Object} -- value
         """
-        #replacing value
+        #not replacing value increase size
         if not key in self:
             self.size +=  1
         if self.root:
@@ -82,6 +82,7 @@ class BinarySearchTree:
             key {Object} -- key to access value
             val {Object} -- value
         """
+        #replace data
         if key == currentNode.key:
             currentNode.payload = val
         elif key < currentNode.key:
@@ -89,6 +90,7 @@ class BinarySearchTree:
                 self._put(key,val,currentNode.leftChild)
             else:
                 currentNode.leftChild = TreeNode(key,val,parent=currentNode,successor=currentNode)
+                self.update_ancestor_successors(currentNode)
         else:
             if currentNode.hasRightChild():
                 self._put(key,val,currentNode.rightChild)
@@ -258,7 +260,11 @@ class BinarySearchTree:
                                        currentNode.rightChild.leftChild, #left child
                                        currentNode.rightChild.rightChild,#right child
                                        currentNode.rightChild.successor) 
-
+    
+    def update_ancestor_successors(self,currentNode):
+        while currentNode.parent:
+            currentNode.parent.successor = currentNode.parent.findSuccessor()
+            currentNode = currentNode.parent
 
     def inorder(self):
         """Runs in order traversal on Tree"""

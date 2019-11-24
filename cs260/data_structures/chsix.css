@@ -1,10 +1,10 @@
-.embeddocleft1, .embeddocleft2, .embeddocleft3, .embeddocleft4, .embeddocright1, .embeddocright2, .embeddocright3, .embeddocright4 {
+.embeddocleft1, .embeddocleft2, .embeddocleft3, .embeddocleft4, .embeddocleft5, .embeddocright1, .embeddocright2, .embeddocright3, .embeddocright4, .embeddocright5 {
     background-color: rgb(184, 184, 184);
     position: relative;
     text-align: center;
     
 }
-.embeddocleft2, .embeddocleft3, .embeddocleft4, .embeddocright2, .embeddocright3, .embeddocright4 {
+.embeddocleft2, .embeddocleft3, .embeddocleft4, .embeddocleft5, .embeddocright2, .embeddocright3, .embeddocright4, .embeddocright5 {
     padding-top: 0px;
     padding-bottom: 25px;
     padding-left: 50px;
@@ -46,17 +46,24 @@
 .embeddocright4 {
     grid-area: 34 / 7 / 44 / 13;
 }
+.embeddocleft5 {
+    grid-area: 44 / 1 / 54 / 7;
+}
+
+.embeddocright5 {
+    grid-area: 44 / 7 / 54 / 13;
+}
 
 
 footer {
-    grid-area: 44 / 1 / 45 / 13;
+    grid-area: 54 / 1 / 55 / 13;
 }
 
-.embeddocleft1 a, .embeddocleft2 a, .embeddocleft3 a, .embeddocleft4 a, .embeddocright1 a, .embeddocright2 a, .embeddocright3 a, .embeddocright4 a {
+.embeddocleft1 a, .embeddocleft2 a, .embeddocleft3 a, .embeddocleft4 a, .embeddocleft5 a, .embeddocright1 a, .embeddocright2 a, .embeddocright3 a, .embeddocright4 a, .embeddocright5 a {
     color:white; 
     text-decoration: none;
 }
-.embeddocleft1 a:hover, .embeddocleft2 a:hover, .embeddocleft3 a:hover, .embeddocleft4 a:hover, .embeddocright1 a:hover, .embeddocright2 a:hover, .embeddocright3 a:hover, .embeddocright4 a:hover {
+.embeddocleft1 a:hover, .embeddocleft2 a:hover, .embeddocleft3 a:hover, .embeddocleft4 a:hover, .embeddocleft5 a:hover, .embeddocright1 a:hover, .embeddocright2 a:hover, .embeddocright3 a:hover, .embeddocright4 a:hover, .embeddocright5 a:hover {
     color: rgb(255, 0, 0); 
   
 }
