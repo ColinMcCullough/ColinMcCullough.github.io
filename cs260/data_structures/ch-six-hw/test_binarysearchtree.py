@@ -77,15 +77,7 @@ class BinaryTreeTests(unittest.TestCase):
         self.assertEqual(x.nonrecinorder(),[2,6,8,9,10,15])
 
 
-    def test_nonrecinorderwithsuccessorprop(self):
-        x = BinarySearchTree()
-        x.put(10,'a')
-        x.put(15,'b')
-        x.put(6,'c')
-        x.put(2,'d')
-        x.put(8,'e')
-        x.put(9,'f')
-        self.assertEqual(x.nonrecinorderwithsuccessorprop(),[2,6,8,9,10,15])
+
         
     def testSize(self):
         print('testing testSize')

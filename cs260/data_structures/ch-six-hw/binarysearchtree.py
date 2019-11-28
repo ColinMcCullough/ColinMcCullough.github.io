@@ -1,12 +1,14 @@
+from cs260.data_structures.ch_three_hw.stack import Stack
+
 '''
 Evercise # 3: Using the find_successor method, write a non-recursive inorder traversal for a binary
 search tree. 
-Answer: Look at function nonrecinorder()
+Answer: Look at function non_rec_inorder()
 
 Evercise # 4: Modify the code for a binary search tree to make it threaded. Write a non-recursive
 inorder traversal method for the threaded binary search tree. A threaded binary tree
 maintains a reference from each node to its successor.
-Answer: Look at function nonrecinorderwithsuccessorprop()
+Answer: Look at function non_rec_inorder_w_successor()
 
 Evercise # 5: Modify our implementation of the binary search tree so that it handles duplicate 
 keys properly. That is, if a key is already in the tree then the new payload should replace the 
@@ -30,8 +32,8 @@ class BinarySearchTree:
         __delitem__(key)
         remove(node)
         inorder()
-        nonrecinorder()
-        nonrecinorderwithsuccessorprop()
+        non_rec_inorder()
+        non_rec_inorder_w_successor()
         postorder()
         preorder()
     """
@@ -277,39 +279,33 @@ class BinarySearchTree:
             print(tree.key)
             self._inorder(tree.rightChild)
 
-    def nonrecinorder(self):
+    def non_rec_inorder(self):
         """Non recursive in order traversal on Tree"""
-        tree = self.root
-        visited = []
-        while tree != None:
-
-            if tree.hasLeftChild() and tree.leftChild.key not in visited:
-                tree = tree.leftChild
-
-            else: #tree.leftChild == None or tree == self.root or tree.leftChild.key in visited:
-                visited.append(tree.key)
-                print(tree.key)
-                tree = tree.findSuccessor()
-
-        # return value for testing purposes only
-        return visited
-    
-    def nonrecinorderwithsuccessorprop(self):
-        """Non recursive in order traversal on Tree using successor property"""
-        tree = self.root
-        visited = []
-        while tree != None:
+        currentnode = self.root
+        stack = Stack()
+        complete = False
+        while not complete:
             #has left child and has not been visited
-            if tree.hasLeftChild() and tree.leftChild.key not in visited:
-                tree = tree.leftChild
+            if currentnode:
+                stack.push(currentnode)
+                currentnode = currentnode.leftChild
+            elif not stack.isEmpty():
+                visited = stack.pop()
+                print(f'Visited: {visited.key}')
+                currentnode = visited.rightChild         
+            else:
+                complete = True
 
-            else: 
-                visited.append(tree.key)
-                print(tree.key)
-                tree = tree.successor
-
-        # return value for testing purposes only
-        return visited       
+    def non_rec_inorder_w_successor(self):
+        """Non recursive in order traversal on Tree using successor property"""
+        currentnode = self.root
+        #find smallest value
+        while currentnode.hasLeftChild():
+            currentnode = currentnode.leftChild
+        #iterate through all sucessors
+        while currentnode:
+            print(f'Visited: {currentnode.key}')
+            currentnode =  currentnode.successor     
 
     def postorder(self):
         """Runs post order traversal on Tree"""
