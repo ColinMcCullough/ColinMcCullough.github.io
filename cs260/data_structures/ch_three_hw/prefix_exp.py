@@ -96,7 +96,6 @@ def doMath(op, op1, op2):
     if not isinstance(op,str) or \
         not isinstance(op1,int) and not isinstance(op1,float) or\
         not isinstance(op2,int) and not isinstance(op2,float):
-
         raise TypeError('incorrect op parameter type')
     if not isinstance(op1,int) and not isinstance(op1,float):
         raise TypeError('incorrect op1 parameter type')
@@ -114,7 +113,7 @@ def doMath(op, op1, op2):
         raise ArithmeticError('parameter must be *,/,-,+')
     return dictionary[op](op1, op2)
 
-x = infixToPostfix('a*b*c*d+e+f')
+x = infixToPostfix('A*B+c*d')
 print(x)
 y = postfixEval('1 2 3 4 5 * + * +')
 print(y)

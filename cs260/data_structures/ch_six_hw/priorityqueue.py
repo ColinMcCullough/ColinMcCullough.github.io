@@ -1,4 +1,5 @@
-from binheap import BinHeap
+#from binheap import BinHeap
+from cs260.data_structures.ch_six_hw.binheap import BinHeap
 
 '''
 Exercise # 11: Using the BinaryHeap class, implement a new class called PriorityQueue. Your
@@ -41,3 +42,18 @@ class PriorityQueue:
             [int] -- number of items in queue
         """        
         return self.queue.current_size
+
+    def decreaseKey(self,val,amt):
+        
+        done = False
+        i = 1
+        myKey = 0
+        while not done and i <= self.current_size:
+            if self.heapList[i][1] == val:
+                done = True
+                myKey = i
+            else:
+                i = i + 1
+        if myKey > 0:
+            self.heapList[myKey] = (amt,self.heapList[myKey][1])
+            self.percUp(myKey)

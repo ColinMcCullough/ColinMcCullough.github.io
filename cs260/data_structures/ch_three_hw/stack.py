@@ -16,8 +16,8 @@ class Stack:
 
      def size(self):
          return len(self.items)
-'''
-s=Stack()
+
+
 #Write a function revstring(mystr) that uses a stack to reverse the characters in a string.
 def revstring(string):
     s=Stack()
@@ -27,6 +27,12 @@ def revstring(string):
     while not s.isEmpty():
         revstr += s.pop()
     return revstr
+
+def matches(open,close):
+    opens = "([{"
+    closers = ")]}"
+    return opens.index(open) == closers.index(close)
+
 
 def parChecker(symbolString):
     s = Stack()
@@ -48,11 +54,6 @@ def parChecker(symbolString):
         return True
     else:
         return False
-
-def matches(open,close):
-    opens = "([{"
-    closers = ")]}"
-    return opens.index(open) == closers.index(close)
 
 def decimal_to_binary(number):
     bin_str = ""
@@ -76,6 +77,6 @@ def base_converter(number,base):
     while not s.isEmpty():
         base_str += digits[s.pop()]
     return base_str
-'''
 
+print(decimal_to_binary(100))
 

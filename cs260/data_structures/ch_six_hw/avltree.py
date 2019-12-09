@@ -13,8 +13,6 @@ class AVLTree(BinarySearchTree):
     def __init__(self):
         BinarySearchTree.__init__(self)
 
-    
-
     def _put(self,key,val,currentNode):
         """Puts key value into AVL Tree
         Arguments:
